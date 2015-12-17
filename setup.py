@@ -49,5 +49,10 @@ setup(
     zip_safe=False,
 )
 
-copy_tree("skels", os.path.join(os.environ["VIRTUAL_ENV"], "share/skels"))
-copy_tree("puppet", os.path.join(os.environ["VIRTUAL_ENV"], "share/puppet"))
+venv_path = os.environ.get("VIRTUAL_ENV")
+if venv_path:
+    copy_tree("skels", os.path.join(venv_path, "share/skels"))
+    copy_tree("puppet", os.path.join(venv_path, "share/puppet"))
+else:
+    print("This was not installed in a virtual environment")
+    print("So, I won't install the skel files.")
