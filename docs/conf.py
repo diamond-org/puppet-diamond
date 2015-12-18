@@ -134,6 +134,7 @@ html_theme_options = {
     'extra_nav_links': OrderedDict(
         (
             ("Diamond Methods", "http://diamond-methods.org"),
+            ("Python Project on PyPI", "https://pypi.python.org/pypi/Puppet-Diamond"),
             ("GitHub Project Page", "http://github.com/diamond-org/puppet-diamond"),
             ("Issue Tracker", "http://github.com/diamond-org/puppet-diamond/issues"),
         )
