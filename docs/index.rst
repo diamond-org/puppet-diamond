@@ -21,3 +21,18 @@ User Guide
     guide/diamond-module
 
 ..  bootstrap-puppetmaster
+
+About
+-----
+
+.. toctree::
+    :maxdepth: 1
+
+    about/license
+..    about/project-history
+..    about/philosophy
+..    about/how_to_contribute_to_the_project
+..    about/changelog
+..    about/contributors
+..    about/diagram_of_libraries
+..    about/diagram_of_a_subproject
