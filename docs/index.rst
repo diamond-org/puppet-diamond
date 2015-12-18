@@ -1,3 +1,11 @@
+.. image:: _static/puppet-diamond-logo.png
+
+.. raw:: html
+
+    <style type="text/css">
+        h1 { display: none; }
+    </style>
+
 .. include:: ../Readme.rst
 
 Introduction
