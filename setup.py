@@ -24,8 +24,8 @@ def grep(attrname):
 
 setup(
     version=grep('__version__'),
-    name='puppet_diamond',
-    description="puppet_diamond",
+    name='Puppet-Diamond',
+    description="Puppet-Diamond can manage an IT Enterprise consisting of many Linux servers.",
     scripts=[
         "bin/get_puppet_certs.py",
         "bin/generate_sshd_keys.sh",
@@ -36,9 +36,19 @@ setup(
         "bin/domo-sync.sh",
         "bin/domo-new.sh",
     ],
-    # packages=["domo"],
-    long_description="""puppet_diamond""",
-    classifiers=[],  # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+    long_description=read('Readme.rst'),
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Information Technology",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: POSIX",
+        "Operating System :: MacOS :: MacOS X",
+        "Programming Language :: Python :: 2.7",
+        "Topic :: System :: Clustering",
+        "Topic :: System :: Systems Administration",
+    ],
     include_package_data=True,
     keywords='',
     author=grep('__author__'),

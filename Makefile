@@ -16,4 +16,7 @@ docs:
 open:
 	open var/sphinx/build/index.html
 
-.PHONY: clean install docs open
+release:
+	python setup.py sdist upload -r https://pypi.python.org/pypi
+
+.PHONY: clean install docs open release
