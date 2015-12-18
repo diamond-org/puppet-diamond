@@ -13,7 +13,7 @@ def read(fname):
     return open(fpath(fname)).read()
 
 
-file_text = read(fpath('__meta__.py'))
+file_text = read(fpath('puppet_diamond/__meta__.py'))
 
 
 def grep(attrname):
@@ -49,6 +49,7 @@ setup(
         "Topic :: System :: Clustering",
         "Topic :: System :: Systems Administration",
     ],
+    packages=["puppet_diamond"],
     include_package_data=True,
     keywords='',
     author=grep('__author__'),

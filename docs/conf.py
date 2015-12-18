@@ -68,7 +68,7 @@ copyright = u'2015 Ian Dennis Miller'
 # built documents.
 #
 # The short X.Y version.
-from __meta__ import __version__
+from puppet_diamond.__meta__ import __version__
 version = __version__
 # The full version, including alpha/beta/rc tags.
 release = __version__
