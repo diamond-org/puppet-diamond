@@ -110,36 +110,62 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ---------------------------------------------------
 
-import alabaster
+use_flask = True
+use_alabaster = False
 
-html_theme_path = [alabaster.get_path()]
-html_theme = 'alabaster'
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',
-        'searchbox.html',
-        'donate.html',
-    ]
-}
+if use_flask:
+    sys.path.append(os.path.abspath('_themes'))
+    html_theme_path = ['_themes']
+    html_theme = 'flask'
 
-from collections import OrderedDict
+    html_sidebars = {
+        'index': [
+            'sidebarlogo.html',
+            'sidebarintro.html',
+            'localtoc.html',
+            'searchbox.html',
+            'version.html'
+        ],
+        '**': [
+            'sidebarlogo.html',
+            'localtoc.html',
+            'relations.html',
+            'searchbox.html',
+            'version.html'
+        ]
+    }
 
-html_theme_options = {
-    'logo': 'puppet-small.png',
-    'github_button': False,
-    'show_powered_by': False,
-    'analytics_id': "UA-70449362-1",
-    'extra_nav_links': OrderedDict(
-        (
-            ("Diamond Methods", "http://diamond-methods.org"),
-            ("Python Project on PyPI", "https://pypi.python.org/pypi/Puppet-Diamond"),
-            ("GitHub Project Page", "http://github.com/diamond-org/puppet-diamond"),
-            ("Issue Tracker", "http://github.com/diamond-org/puppet-diamond/issues"),
+elif use_alabaster:
+    import alabaster
+
+    html_theme_path = [alabaster.get_path()]
+    html_theme = 'alabaster'
+    html_sidebars = {
+        '**': [
+            'about.html',
+            'navigation.html',
+            'relations.html',
+            'searchbox.html',
+            'donate.html',
+        ]
+    }
+
+    from collections import OrderedDict
+
+    html_theme_options = {
+        'logo': 'puppet-small.png',
+        'github_button': False,
+        'show_powered_by': False,
+        'analytics_id': "UA-70449362-1",
+        'extra_nav_links': OrderedDict(
+            (
+                ("Diamond Methods", "http://diamond-methods.org"),
+                ("Python Project on PyPI", "https://pypi.python.org/pypi/Puppet-Diamond"),
+                ("GitHub Project Page", "http://github.com/diamond-org/puppet-diamond"),
+                ("Issue Tracker", "http://github.com/diamond-org/puppet-diamond/issues"),
+            )
         )
-    )
-}
+    }
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
