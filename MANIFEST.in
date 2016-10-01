@@ -1,4 +1,3 @@
-recursive-include skels *
+graft pub2
+include *.cfg *.rst *.in *.txt
 recursive-include puppet *
-include Readme.rst
-include requirements.txt
